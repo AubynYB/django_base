@@ -12,5 +12,11 @@ from django.http import HttpResponse
 
 
 def index(request):
+    # 模拟查询数据
+    context = {
+        'name': '马上双11，点击有惊喜'
+    }
 
-    return HttpResponse('OK')
+    # return HttpResponse('OK')
+    # request template_name context=None
+    return render(request, 'book/index.html', context=context)
